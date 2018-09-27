@@ -24,7 +24,7 @@
           <div class="sub-head-text"><span>09.27.18 - Day 2</span></div>
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Agenda</h5>
@@ -93,7 +93,7 @@
           </ul>
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Javascript in the Console</h5>
@@ -103,7 +103,7 @@
           </div>
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Working with JS Libraries</h5>
@@ -127,7 +127,7 @@
           </ul>
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Working with JS Libraries</h5>
@@ -156,7 +156,7 @@
           </ul>
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Working with JS Libraries</h5>
@@ -190,7 +190,7 @@
           </ul>
         </div>
       </section>
-  
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Intro to JQuery</h5>
@@ -203,7 +203,7 @@
           <span>Clone the repo <a href="https://github.com/rose-water/ga-js-day-2" target="_blank">here</a></span>
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Intro to JQuery</h5>
@@ -232,7 +232,7 @@
           </ul>
         </div>
       </section>
-    
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Intro to JQuery</h5>
@@ -261,7 +261,7 @@
                     &lt;!-- When the document is loaded, we call this 'anonymous function' --&gt;
                     $(document).ready(function() {
                       alert("Hello JQuery!");
-
+                      
                       let markup = '&lt;div id="my-div"&gt;&lt;p&gt;I was appended to the body with JQuery!&lt;/p&gt;&lt;/div&gt;';
                       $('body').append(markup);
                     });                          
@@ -272,7 +272,7 @@
           </ul>
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Intro to JQuery</h5>
@@ -300,10 +300,10 @@
                   <code data-trim data-noescape>
                     &lt;!-- /exercises/02-jquery-click.html --&gt;                            
                     $(document).ready(function() {
-        
+                      
                       $('#myBtn').click(function() {
                         let markup = '&lt;div id="my-div"&gt;&lt;p&gt;I was appended to the body with JQuery!&lt;/p&gt;&lt;/div&gt;';
-              
+                        
                         $('body').append(markup);
                       });
                     });  
@@ -314,7 +314,7 @@
           </ul>
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Intro to JQuery</h5>
@@ -332,7 +332,7 @@
                     &lt;!-- /exercises/03-jquery-multipledivs.html --&gt;                           
                     $(document).ready(function() {
                       setupDivs();
-              
+                      
                       $('#myBtn').click(function() {
                         $('div.custom-div').css("background", getRandomColor());
                       });
@@ -347,17 +347,17 @@
                       }
                       return color;
                     }
-                  
+                    
                     &lt;!-- ---------------------------------------------------- --&gt; 
                     function setupDivs() {
                       let markup = '';
                       let numDivs = 48;
-              
+                      
                       let singleDivMarkup = '&lt;div class="custom-div"&gt;&lt;/div&gt;';
                       for (let i = 0; i &lt; numDivs; i++) {
                         markup += singleDivMarkup;
                       }
-              
+                      
                       $('body').append(markup);
                     }  
                   </code>
@@ -367,7 +367,7 @@
           </ul>
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Intro to JQuery</h5>
@@ -395,7 +395,7 @@
                     &lt;!-- /exercises/04-jquery-class.html --&gt;                            
                     $(document).ready(function() {
                       setupDivs();
-              
+                      
                       $('#myBtn').click(function() {
                         $('div.custom-div-big').addClass("custom-div");
                         $('div.custom-div').removeClass("custom-div-big");
@@ -411,7 +411,7 @@
                       for (let i = 0; i &lt; numDivs; i++) {
                         markup += singleDivMarkup;
                       }
-              
+                      
                       $('body').append(markup);
                     }  
                   </code>
@@ -421,7 +421,7 @@
           </ul>
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Intro to JQuery</h5>
@@ -447,17 +447,17 @@
                         $('.custom-div-big').show();
                       })
                     });
-              
+                    
                     &lt;!-- ----------------------------------------------------- --&gt;
                     function setupDivs() {
                       let markup = '';
                       let numDivs = 8;
-              
+                      
                       let singleDivMarkup = '&lt;div class="custom-div-big"&gt;&lt;/div&gt;';
                       for (let i = 0; i &lt; numDivs; i++) {
                         markup += singleDivMarkup;
                       }
-              
+                      
                       $('body').append(markup);
                     }                            
                   </code>
@@ -467,7 +467,7 @@
           </ul>
         </div>
       </section>
-    
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Intro to JQuery</h5>
@@ -490,20 +490,20 @@
                     &lt;!-- /exercises/06-jquery-multiple-events.html --&gt; 
                     $(document).ready(function() {
                       setupDivs();
-              
+                      
                       // add multiple events
                       // notice that we are passing an object to on()
                       $('.custom-div-big').on({
                         click: function() {
                           $(this).css("background", getRandomColor())
                         },
-              
+                        
                         dblclick: function() {
                           $(this).css("background", "black");
                         }
                       })
                     });
-                      
+                    
                     &lt;!-- ------------------------------------------------------- --&gt; 
                     function getRandomColor() {
                       let letters = '0123456789ABCDEF';
@@ -513,17 +513,17 @@
                       }
                       return color;
                     }
-              
+                    
                     &lt;!-- ------------------------------------------------------- --&gt; 
                     function setupDivs() {
                       let markup = '';
                       let numDivs = 6;
-              
+                      
                       let singleDivMarkup = '&lt;div class="custom-div-big"&gt;&lt;/div&gt;';
                       for (let i = 0; i &lt; numDivs; i++) {
                         markup += singleDivMarkup;
                       }
-              
+                      
                       $('body').append(markup);
                     }  
                   </code>
@@ -533,7 +533,7 @@
           </ul>
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
         <h5>Javascript Libraries</h5>
@@ -545,20 +545,276 @@
         <div class="child-slide-body">
         </div>
       </section>
-
+      
       <!-- ------------- -->
       <section class="child-slide">
-        <h5>BREAK TIME</h5>
+        <h5>Javascript Libraries</h5>
         <div class="sub-head">
           <div class="sub-head-text">
-            <span>Go outside, stretch, grab dinner</span>
+            <span>2D</span>
           </div>
         </div>
         <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span><a href="http://paperjs.org/" target="_blank">Paper.js</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><a href="https://two.js.org/" target="_blank">Two.js</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><a href="http://origamijs.com/docs/#examples" target="_blank">Origami.js</a></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Javascript Libraries</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Data Visualization</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span><a href="https://d3js.org/" target="_blank">D3.js</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><a href="http://dmitrybaranovskiy.github.io/raphael/" target="_blank">Raphael.js</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><a href="https://www.chartjs.org/" target="_blank">Chart.js</a></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Javascript Libraries</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Motion Graphics & Animation</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span><a href="http://animejs.com/" target="_blank">Anime.js</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><a href="http://mojs.io" target="_blank">Mo.js</a></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Javascript Libraries</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>3D & WebGL</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span><a href="https://threejs.org/examples/" target="_blank">Three.js</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><a href="https://www.babylonjs.com/" target="_blank">Babylon.js</a></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Javascript Libraries</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Physics Engines (2D & 3D)</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span><a href="http://brm.io/matter-js/" target="_blank">Matter.js</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><a href="http://www.cannonjs.org/" target="_blank">Cannon.js</a></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Javascript Libraries</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Text</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span><a href="https://rednoise.org/rita/" target="_blank">RiTa (generative text)</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><a href="http://velocityjs.org/blast/" target="_blank">Blast.js (breaking apart text)</a></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Javascript Libraries</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Audio</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span><a href="https://howlerjs.com/" target="_blank">Howler.js</a></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span><a href="https://www.createjs.com/soundjs" target="_blank">Sound.js</a></span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>GROUP ASSIGNMENT</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Yes, groups</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Create a single page website that either:</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Represents an art movement (a useful list is <a href="https://artlandapp.com/art-movements-and-styles/" target="_blank">here</a>)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Is an homage to an artist's artwork</span>
+              </div>
+            </li>
+          </ul>
         </div>
       </section>
 
-     <!-- END SLIDES -->
+      <section class="child-slide">
+        <h5>GROUP ASSIGNMENT</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>REQUIREMENTS</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Use at least one JS library</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Incorporate some level of interactivity (it doesn't need to be complex!) </span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Each person must have a role and be prepared to talk about it</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>You must create a Git repo for your project, and publish to a Github page</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="child-slide">
+        <h5>GROUP ASSIGNMENT</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>More on Git requirement:</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Only one person needs to create the repo</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Everyone else will be a contributor to that remote (demo)</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>We haven't covered collaborative Git practices, so you will need to coordinate</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- END SLIDES -->
     </div>
   </div>
 </body>
@@ -568,7 +824,7 @@
 <script>
   // ---------------------------------------------
   init();
- 
+  
   // ---------------------------------------------
   function init() {
     Reveal.initialize({
@@ -585,7 +841,7 @@
       slideNumber: true,
       slideNumber: 'c/t'
     });
-  
+    
   }
 </script>
 
