@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+  <title>Week 3: Javascript, Day 2</title>
+  
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/black.css">
+  <link rel="stylesheet" href="lib/css/zenburn.css">
+  <link rel="stylesheet" href="css/custom.css">
+</head>
+
+<body>
+  <div class="reveal">
+    <div class="slides">
+      
+      <!-- ------------- -->
+      <section class="title-slide">
+        <h3 class="title-text">JAVASCRIPT</h3>
+        <div class="sub-head">
+          <div class="sub-head-text"><span>09.27.18 - Day 2</span></div>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Agenda</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>what we're doing today:</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Javascript in the Console</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>RECAP: Working with JS libraries</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Intro to JQuery</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>JS Libraries: 2D</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>JS Libraries: Data Visualization</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>JS Libraries: Motion Graphics & Animation</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>JS Libraries: 3D & WebGL</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>JS Libraries: Physics Engines</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>JS Libraries: Text</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>JS Libraries: Audio</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Group Assignment: Represent an Art Movement or Artist</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Javascript in the Console</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>DEMO</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Working with JS Libraries</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>RECAP</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Libraries are a file or set of files made up of functions</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>They typically help speed up development, especially if they 'wrap' other code</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Working with JS Libraries</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>RECAP</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>You typically link to them with <code>&lt;script&gt;</code> tags in your HTML</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>You may also see <code>import</code> or <code>include</code> or <code>require</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>These typically occur when JS files need to include functions from other JS files</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Working with JS Libraries</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>RECAP</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Download the library files, typically inside a <code>js</code> or <code>js/libs</code> folder</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Having copies of the files locally makes things faster</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Most popular libraries are available via <b>C</b>ontent <b>D</b>elivery <b>N</b>etwork, or a CDN</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Because you're getting these files from the cloud, it will increase load time</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+  
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to JQuery</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Get the code for today's class</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <span>Clone the repo <a href="https://github.com/rose-water/ga-js-day-2" target="_blank">here</a></span>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to JQuery</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>What is JQuery?</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>JQuery is a utility library that makes it easier to code aspects of Javascript</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>It has a lot of functionality for event handling, interactivity</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>It makes it easier to target and batch select elements</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to JQuery</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><code>$(document).ready()</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>The <code>$</code> is essentially an alias/shorthand for JQuery()</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>Some other libraries use the <code>$</code> as well, so watch out for conflicts</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    &lt;!-- /exercises/01-jquery-intro.html --&gt;    
+                    &lt;!-- When the document is loaded, we call this 'anonymous function' --&gt;
+                    $(document).ready(function() {
+                      alert("Hello JQuery!");
+
+                      let markup = '&lt;div id="my-div"&gt;&lt;p&gt;I was appended to the body with JQuery!&lt;/p&gt;&lt;/div&gt;';
+                      $('body').append(markup);
+                    });                          
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to JQuery</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Click Events: <code>$('').click()</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Much like the previous example, we pass in an anonymous function that gets called</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    &lt;!-- /exercises/02-jquery-click.html --&gt;  
+                    &lt;button id=&quot;myBtn&quot;&gt;Click to add a div&lt;/button&gt;
+                  </code>
+                </pre>
+                <pre>
+                  <code data-trim data-noescape>
+                    &lt;!-- /exercises/02-jquery-click.html --&gt;                            
+                    $(document).ready(function() {
+        
+                      $('#myBtn').click(function() {
+                        let markup = '&lt;div id="my-div"&gt;&lt;p&gt;I was appended to the body with JQuery!&lt;/p&gt;&lt;/div&gt;';
+              
+                        $('body').append(markup);
+                      });
+                    });  
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to JQuery</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><code>Adding & Updating Multiple Elements</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    &lt;!-- /exercises/03-jquery-multipledivs.html --&gt;                           
+                    $(document).ready(function() {
+                      setupDivs();
+              
+                      $('#myBtn').click(function() {
+                        $('div.custom-div').css("background", getRandomColor());
+                      });
+                    });
+                    
+                    &lt;!-- ---------------------------------------------------- --&gt; 
+                    function getRandomColor() {
+                      let letters = '0123456789ABCDEF';
+                      let color = '#';
+                      for (let i = 0; i &lt; 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                      }
+                      return color;
+                    }
+                  
+                    &lt;!-- ---------------------------------------------------- --&gt; 
+                    function setupDivs() {
+                      let markup = '';
+                      let numDivs = 48;
+              
+                      let singleDivMarkup = '&lt;div class="custom-div"&gt;&lt;/div&gt;';
+                      for (let i = 0; i &lt; numDivs; i++) {
+                        markup += singleDivMarkup;
+                      }
+              
+                      $('body').append(markup);
+                    }  
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to JQuery</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><code>Adding & Removing Classes</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Notice that the order of this matters</span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                +<span>You can also chain these, e.g., <code>.addClass('class1').removeClass('class2')</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    &lt;!-- /exercises/04-jquery-class.html --&gt;                            
+                    $(document).ready(function() {
+                      setupDivs();
+              
+                      $('#myBtn').click(function() {
+                        $('div.custom-div-big').addClass("custom-div");
+                        $('div.custom-div').removeClass("custom-div-big");
+                      });
+                    });
+                    
+                    &lt;!-- --------------------------------------------------- --&gt;
+                    function setupDivs() {
+                      let markup = '';
+                      let numDivs = 8;
+                      
+                      let singleDivMarkup = '&lt;div class="custom-div-big"&gt;&lt;/div&gt;';
+                      for (let i = 0; i &lt; numDivs; i++) {
+                        markup += singleDivMarkup;
+                      }
+              
+                      $('body').append(markup);
+                    }  
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to JQuery</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><code>Show & Hide</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    &lt;!-- /exercises/05-jquery-show-hide.html --&gt;
+                    $(document).ready(function() {
+                      setupDivs();
+                      
+                      // See what's happening in the inspector when you hover!
+                      $('#my-div').hover(function() {
+                        $('.custom-div-big').hide();
+                      }, function() {
+                        $('.custom-div-big').show();
+                      })
+                    });
+              
+                    &lt;!-- ----------------------------------------------------- --&gt;
+                    function setupDivs() {
+                      let markup = '';
+                      let numDivs = 8;
+              
+                      let singleDivMarkup = '&lt;div class="custom-div-big"&gt;&lt;/div&gt;';
+                      for (let i = 0; i &lt; numDivs; i++) {
+                        markup += singleDivMarkup;
+                      }
+              
+                      $('body').append(markup);
+                    }                            
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Intro to JQuery</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span><code>Attaching Multiple Events</code></span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+          <ul class="child-slide-body-list">
+            <li>
+              <div class="list-item-container">
+                +<span>Notice that we are passing in an <i>object</i> to <code>on()</code></span>
+              </div>
+            </li>
+            <li>
+              <div class="list-item-container">
+                <pre>
+                  <code data-trim data-noescape>
+                    &lt;!-- /exercises/06-jquery-multiple-events.html --&gt; 
+                    $(document).ready(function() {
+                      setupDivs();
+              
+                      // add multiple events
+                      // notice that we are passing an object to on()
+                      $('.custom-div-big').on({
+                        click: function() {
+                          $(this).css("background", getRandomColor())
+                        },
+              
+                        dblclick: function() {
+                          $(this).css("background", "black");
+                        }
+                      })
+                    });
+                      
+                    &lt;!-- ------------------------------------------------------- --&gt; 
+                    function getRandomColor() {
+                      let letters = '0123456789ABCDEF';
+                      let color = '#';
+                      for (let i = 0; i < 6; i++) {
+                        color += letters[Math.floor(Math.random() * 16)];
+                      }
+                      return color;
+                    }
+              
+                    &lt;!-- ------------------------------------------------------- --&gt; 
+                    function setupDivs() {
+                      let markup = '';
+                      let numDivs = 6;
+              
+                      let singleDivMarkup = '&lt;div class="custom-div-big"&gt;&lt;/div&gt;';
+                      for (let i = 0; i &lt; numDivs; i++) {
+                        markup += singleDivMarkup;
+                      }
+              
+                      $('body').append(markup);
+                    }  
+                  </code>
+                </pre>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>Javascript Libraries</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>An Overview By Category</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+        </div>
+      </section>
+
+      <!-- ------------- -->
+      <section class="child-slide">
+        <h5>BREAK TIME</h5>
+        <div class="sub-head">
+          <div class="sub-head-text">
+            <span>Go outside, stretch, grab dinner</span>
+          </div>
+        </div>
+        <div class="child-slide-body">
+        </div>
+      </section>
+
+     <!-- END SLIDES -->
+    </div>
+  </div>
+</body>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+<script>
+  // ---------------------------------------------
+  init();
+ 
+  // ---------------------------------------------
+  function init() {
+    Reveal.initialize({
+      dependencies: [
+      { 
+        src: 'plugin/highlight/highlight.js', 
+        async: true, 
+        callback: function() { hljs.initHighlightingOnLoad(); } 
+      }
+      ]
+    });
+    
+    Reveal.configure({
+      slideNumber: true,
+      slideNumber: 'c/t'
+    });
+  
+  }
+</script>
+
+</html>
